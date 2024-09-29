@@ -12,6 +12,7 @@ for path in os.listdir(dir_path):
         print(str(path), extension)
         if str(path).endswith(extension):
             data.append(path)  # .name)
+            break
 
 # Convert into JSON
 # File name is mydata.json
