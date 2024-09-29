@@ -9,10 +9,18 @@
 
 
     <script>
-        function image() {
-            const image_list = require('./my_data.json');
-            return image_list[1]
-        }
+        fetch('my_data.json')
+            .then(response => response.json())
+            .then(data => {
+                const imageList = data.images;
+
+                function getRandomImage() {
+                    return imageList[Math.floor(Math.random() * imageList.length)];
+                }
+                ;
+                document.getElementById('file').textContent = getRandomImage();
+                document.querySelector('img').src = `images/${getRandomImage()}`;
+            });
 
     </script>
 </body>
