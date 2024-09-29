@@ -16,4 +16,4 @@ for path in os.listdir(dir_path):
 # Convert into JSON
 # File name is mydata.json
 with open("my_data.json", "w") as final:
-    json.dump(data, final)
+    json.dump({'image': data}, final)
