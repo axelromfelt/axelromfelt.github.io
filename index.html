@@ -4,7 +4,7 @@
 <body>
     <p id='file'></p>
     <!--  <p id='file'></p> document.getElementById('file').textContent = getRandomImage();-->
-    <img src="images/{{image()}}" style="width: 2560px; height: 1440px; object-fit: cover;" />
+    <img src="./images/{{image()}}" style="width: 2560px; height: 1440px; object-fit: cover;" />
 
 
 
@@ -19,7 +19,7 @@
                 }
                 ;
                 document.getElementById('file').textContent = getRandomImage();
-                document.querySelector('img').src = `images/${getRandomImage()}`;
+                document.querySelector('img').src = `./images/${getRandomImage()}`;
             });
 
 
