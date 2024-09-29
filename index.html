@@ -2,7 +2,7 @@
 <html>
 
 <body>
-    <h1>return filename()</h1>
+    <h1>{{image()}}</h1>
     <p id='file'></p>
     <img src="images/{{image()}}" style="width: 2560px; height: 1440px; object-fit: cover;" />
 
@@ -11,7 +11,7 @@
     <script>
         function image() {
             const image_list = require('./my_data.json');
-            return image_list
+            return image_list[1]
         }
 
     </script>
